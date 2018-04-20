@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+       <!--默认配置-->
+    <default-config>  
+        <property name="initialPoolSize">10</property>  
+        <property name="maxIdleTime">30</property>  
+        <property name="maxPoolSize">100</property>  
+        <property name="minPoolSize">10</property>  
+        <property name="maxStatements">200</property>  
+    </default-config>  
+  
+   <!--配置连接池mysql-->
+    <named-config name="mysql">  
+        <property name="driverClass">com.mysql.jdbc.Driver</property>  
+        <property name="jdbcUrl">jdbc:mysql://172.16.33.50/mytest?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true&amp;autoReconnect=true&amp;failOverReadOnly=false</property>  
+        <property name="user">root</property>  
+        <property name="password">123456</property>  
+        <property name="initialPoolSize">10</property>  
+        <property name="maxIdleTime">30</property>  
+        <property name="maxPoolSize">100</property>  
+        <property name="minPoolSize">10</property>  
+        <property name="maxStatements">200</property>  
+    </named-config> 
+    
+    <!--配置连接池mysql-->
+    <named-config name="oraclesql">  
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>  
+        <property name="jdbcUrl">jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.71.21.151)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.71.21.151)(PORT = 1521))(LOAD_BALANCE = yes)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = jytest)))</property>  
+        <property name="user">businessdata</property>  
+        <property name="password">businessdata_2017</property>  
+        <property name="initialPoolSize">10</property>  
+        <property name="maxIdleTime">30</property>  
+        <property name="maxPoolSize">100</property>  
+        <property name="minPoolSize">10</property>  
+        <property name="maxStatements">200</property>  
+    </named-config> 
+    
+</c3p0-config>
